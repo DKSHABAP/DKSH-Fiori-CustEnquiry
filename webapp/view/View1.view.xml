@@ -1,0 +1,133 @@
+<mvc:View controllerName="incture.com.ConnectClientCustomeEnquiry.controller.View1" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:fb="sap.ui.comp.filterbar" xmlns:html="http://www.w3.org/1999/xhtml">
+	<html:iframe src="https://www.googletagmanager.com/ns.html?id=UA-179725869-1" height="0" width="0" style="display:none; visibility:hidden"></html:iframe>
+	<App id="app">
+		<pages>
+			<Page id="page" title="{i18n>title}" class="sapUiSizeCompact" showHeader="false">
+				<!--<customHeader>-->
+				<!--	<OverflowToolbar class="incturePrimaryClass">-->
+				<!--		<content>-->
+				<!--			<Title text="Customer Details" level="H4" titleStyle="H4"></Title>-->
+				<!--<ToolbarSpacer></ToolbarSpacer>-->
+				<!--<Button text="Search" type="Emphasized"></Button>-->
+				<!--		</content>-->
+				<!--	</OverflowToolbar>-->
+				<!--</customHeader>-->
+				<content>
+					<l:VerticalLayout width="100%">
+						<!--<Title text="Selection Criteria" level="H4" titleStyle="H4" class="titleCls"/>-->
+						<OverflowToolbar>
+							<Label text="{i18n>Search}" design="Bold"></Label>
+							<ToolbarSpacer/>
+							<Button text="{i18n>CollapseSearch}" tooltip="Collapse Search" press="onPressCollapse" visible="{baseModel>/CollapseVisiblity}"/>
+							<Button text="{i18n>ExpandSearch}" tooltip="Expand Search" press="onPressOpen" visible="{baseModel>/openVisiblity}"/>
+						</OverflowToolbar>
+						<fb:FilterBar showFilterConfiguration="false" useToolbar="false" showGoOnFB="false" class="adaptFilterClass"
+							visible="{baseModel>/SearchVisiblity}">
+							<!--showClearOnFB="false" showGoOnFB="false" showFilterConfiguration="false" useToolbar="true" header="Search" reset="onReset"-->
+							<!--	search="onSearch" clear="onClear">-->
+							<fb:filterGroupItems>
+								<fb:FilterGroupItem groupName="__$INTERNAL$" name="A" label="{i18n>CustomerCode}" partOfCurrentVariant="true" visibleInFilterBar="true">
+									<fb:control>
+										<!--<Input placeholder="Select Sold To" value="{oModel>/custCode}" valueHelpRequest="valueHelpRequestCustCode" valueHelpOnly="true" showValueHelp="true" />-->
+										<Input placeholder="{i18n>EnterCustomerCode}" value="{oModel>/custCode}"></Input>
+									</fb:control>
+								</fb:FilterGroupItem>
+								<fb:FilterGroupItem groupName="__$INTERNAL$" name="B" label="{i18n>OldCustomercode}" partOfCurrentVariant="true" visibleInFilterBar="true">
+									<fb:control>
+										<Input placeholder="{i18n>EnterOldCustomerCode}" value="{oModel>/oldCustCode}"/>
+									</fb:control>
+								</fb:FilterGroupItem>
+								<fb:FilterGroupItem groupName="__$INTERNAL$" name="C" label="{i18n>CustomerName}"
+									visibleInFilterBar="true">
+									<fb:control>
+										<Input value="{oModel>/name}" placeholder="{i18n>EnterCustomerName}"/>
+									</fb:control>
+								</fb:FilterGroupItem>
+								<!--<fb:FilterGroupItem groupName="__$INTERNAL$" name="D" label="Name EN" partOfCurrentVariant="true" visibleInFilterBar="true">-->
+								<!--	<fb:control>-->
+								<!--		<Input value="{oModel>/name}"/>-->
+								<!--	</fb:control>-->
+								<!--</fb:FilterGroupItem>-->
+								<fb:FilterGroupItem groupName="__$INTERNAL$" name="E" label="{i18n>SalesOrg}" visibleInFilterBar="true">
+									<fb:control>
+										<MultiInput id="ATPSalesOrgFromID" value="{oModel>/salesOrg}" tokenUpdate="onDeleteSalesOrg" placeholder="{i18n>SelectSalesOrg}"
+											showValueHelp="true" valueHelpRequest="salesOrgValueHelp" valueState="{oModel>/SalesOrgValueState}" valueHelpOnly="true"/>
+										<!--<Input showValueHelp="true" valueHelpOnly="true" valueHelpRequest="salesOrgValueHelp" value="{oModel>/salesOrg}"/>-->
+									</fb:control>
+								</fb:FilterGroupItem>
+							</fb:filterGroupItems>
+						</fb:FilterBar>
+						<OverflowToolbar class="noBorder" visible="{baseModel>/SearchVisiblity}">
+							<ToolbarSpacer/>
+							<Button icon="sap-icon://search" tooltip="{i18n>Search}" text="{i18n>Search}" type="Emphasized" press="onSearch"></Button>
+							<Button icon="sap-icon://refresh" tooltip="{i18n>Reset}" text="{i18n>Reset}" press="onClear"></Button>
+							<ToolbarSpacer visible="false"/>
+						</OverflowToolbar>
+					</l:VerticalLayout>
+					<HBox>
+						<Table items="{oTableModel>/results}" id="tableId" class="tableCls">
+							<headerToolbar sticky="HeaderToolbar">
+								<Toolbar>
+									<Title text="{i18n>CustomerDetails}{path:'oTableModel>/results',formatter:'incture.com.MaterialEnquiry.model.formatter.getLength'}" level="H4"
+										titleStyle="H4"></Title>
+									<ToolbarSpacer></ToolbarSpacer>
+									<SearchField width="30%" liveChange="onLiveChange" id="searchField"></SearchField>
+									<Button text="Export" icon="sap-icon://download" press="onExport" id="exportId" tooltip="Download" type="Emphasized" enabled="false"/>
+								</Toolbar>
+							</headerToolbar>
+							<columns>
+								<Column hAlign="Center" demandPopin="true">
+									<Label text="{i18n>CustomerCode}" design="Bold" wrapping="true"/>
+								</Column>
+								<Column hAlign="Center" minScreenWidth="Tablet">
+									<Label text="{i18n>SalesOrgs}" design="Bold"/>
+								</Column>
+								<Column hAlign="Center" demandPopin="true" minScreenWidth="Tablet">
+									<Label text="{i18n>Name(Local)}" design="Bold"/>
+								</Column>
+								<Column hAlign="Center" demandPopin="true">
+									<Label text="{i18n>Name(EN)}" design="Bold"/>
+								</Column>
+								<!--<Column hAlign="Center" visible="{device>/system/phone}">-->
+								<!--	<Label text="" design="Bold"/>-->
+								<!--</Column>-->
+								<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true">
+									<Label text="{i18n>DistChannel}" design="Bold"/>
+								</Column>
+								<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true">
+									<Label text="{i18n>City}" design="Bold"/>
+								</Column>
+								<Column hAlign="Center" demandPopin="true" minScreenWidth="Tablet">
+									<Label text="{i18n>Province}" design="Bold"/>
+								</Column>
+								<Column hAlign="Center" minScreenWidth="Tablet">
+									<Label text="{i18n>PostCode}" design="Bold"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem type="Navigation" press="onRowSelect">
+									<cells>
+										<Text text="{oTableModel>custCode}"></Text>
+										<Text
+											text="{parts:[{path:'oTableModel>salesOrg'},{path:'oTableModel>sOrgName'}],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
+										<!--<Text text="{oTableModel>titleInLocalName}"></Text>-->
+										<Text
+											text="{parts:[{path:'oTableModel>titleInLocalName'},{path:'oTableModel>nameInTH'}],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'} "></Text>
+										<Text text="{oTableModel>nameInEN}"></Text>
+										<Text
+											text="{parts:[{path:'oTableModel>channel'},{path:'oTableModel>dcName'}],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
+										<Text text="{oTableModel>city}"></Text>
+										<Text text="{oTableModel>province}"></Text>
+										<Text text="{oTableModel>postCode}"></Text>
+										<!--<Text text="{oTableModel>oldCustCode}"></Text>-->
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</HBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

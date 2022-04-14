@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Popover placement="PreferredBottomOrFlip" showHeader="false" resizable="true" class="PopClass">
+		<VBox class="popPaddingCls">
+			<HBox>
+				<Label text="{i18n>SalesOrgs}: " design="Bold"/>
+				<Text text="{tblModel>/salesOrg}"></Text>
+			</HBox>
+			<HBox>
+				<Label text="{i18n>PostCode}: " design="Bold"/>
+				<Text text="{tblModel>/postCode}"></Text>
+			</HBox>
+		</VBox>
+	</Popover>
+</core:FragmentDefinition>

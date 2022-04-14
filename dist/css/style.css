@@ -1,0 +1,59 @@
+/* Enter your custom styles here */
+
+.sapMLabel {
+    font-weight: bold;
+}
+
+.sapMDialog>header.sapMDialogTitle .sapMTitle {
+    color: black!important;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.sapUiCompSmartChartHeader {
+    visibility: hidden
+}
+
+.sapUiCompFilterBar {
+    background-color: #fff;
+    border-bottom: 0 !important;
+}
+
+.tableCls.sapMList {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.sapUiCompFilterBarNonPhone.sapUiRespGrid.sapUiRespGridHSpace0 {
+    padding: 0 1rem!important;
+}
+
+.noBorder.sapMTB {
+    border-bottom: 0 !important;
+    background: white;
+}
+
+.sapUiCompFilterBarToolbar {
+    border-bottom-style: none;
+    background: #f5f5f5 !important;
+    border-bottom: 1px solid #ccc !important;
+}
+
+.sapMTB-Transparent-CTX.sapMTB {
+    padding: 0;
+}
+
+.sapMTB {
+    height: 2.75rem;
+    padding: 0 1rem;
+    background: transparent;
+}
+.sapUiCompFilterBar .sapUiAFLayoutItem, .sapUiCompFilterBar .sapUiAFLayoutEnd {	
+    margin-top: 0.5rem;	
+    width: 16rem;	
+}	
+.popPaddingCls{	
+	padding:0.5rem;	
+}

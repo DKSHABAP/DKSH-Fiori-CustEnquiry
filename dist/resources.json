@@ -1,0 +1,87 @@
+{
+    "resources": [
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_th.properties",
+            "raw": "i18n/i18n.properties",
+            "locale": "_th"
+        },
+        {
+            "name": "controller/View1.controller.js"
+        },
+        {
+            "name": "model/models.js"
+        },
+        {
+            "name": "model/formatter.js"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "manifest-bundle.zip"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "model/models-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "model/formatter-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/View1-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "Component-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../../../sap-ui-version.json"
+        },
+        {
+            "name": "neo-app.json"
+        },
+        {
+            "name": "di.code-validation.core_issues.json"
+        },
+        {
+            "name": "view/Fragments/soldTo.fragment.xml"
+        },
+        {
+            "name": "view/Fragments/popOver.fragment.xml"
+        },
+        {
+            "name": "view/Fragments/SalesOrgSingle.fragment.xml"
+        },
+        {
+            "name": "view/Fragments/SalesOrg.fragment.xml"
+        },
+        {
+            "name": "view/Fragments/Division.fragment.xml"
+        },
+        {
+            "name": "view/Fragments/DistChan.fragment.xml"
+        },
+        {
+            "name": "view/View1.view.xml"
+        },
+        {
+            "name": "css/style.css"
+        },
+        {
+            "name": "index.html"
+        }
+    ]
+}
