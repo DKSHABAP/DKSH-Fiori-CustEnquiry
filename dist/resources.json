@@ -1,8 +1,7 @@
 {
     "resources": [
         {
-            "name": "i18n/i18n.properties",
-            "raw": "i18n/i18n.properties"
+            "name": "manifest-bundle.zip"
         },
         {
             "name": "i18n/i18n_th.properties",
@@ -10,7 +9,7 @@
             "locale": "_th"
         },
         {
-            "name": "controller/View1.controller.js"
+            "name": "manifest.json"
         },
         {
             "name": "model/models.js"
@@ -19,13 +18,14 @@
             "name": "model/formatter.js"
         },
         {
-            "name": "manifest.json"
+            "name": "controller/View1.controller.js"
         },
         {
             "name": "Component.js"
         },
         {
-            "name": "manifest-bundle.zip"
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
         },
         {
             "name": "Component-preload.js",

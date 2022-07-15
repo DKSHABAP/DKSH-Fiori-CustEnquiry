@@ -89,6 +89,15 @@
 								<Column hAlign="Center" demandPopin="true">
 									<Label text="{i18n>Name(EN)}" design="Bold"/>
 								</Column>
+								<Column hAlign="Center" demandPopin="true">
+									<Label text="{i18n>OrderBlock}" design="Bold" wrapping="true"/>
+								</Column>
+								<Column hAlign="Center" demandPopin="true">
+									<Label text="{i18n>DeliveryBlock}" design="Bold" wrapping="true"/>
+								</Column>
+								<Column hAlign="Center" demandPopin="true">
+									<Label text="{i18n>BillingBlock}" design="Bold" wrapping="true"/>
+								</Column>
 								<!--<Column hAlign="Center" visible="{device>/system/phone}">-->
 								<!--	<Label text="" design="Bold"/>-->
 								<!--</Column>-->
@@ -115,6 +124,9 @@
 										<Text
 											text="{parts:[{path:'oTableModel>titleInLocalName'},{path:'oTableModel>nameInTH'}],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'} "></Text>
 										<Text text="{oTableModel>nameInEN}"></Text>
+										<Text text="{oTableModel>orderBlock}"></Text>
+										<Text text="{oTableModel>deliveryBlock}"></Text>
+										<Text text="{oTableModel>billingBlock}"></Text>
 										<Text
 											text="{parts:[{path:'oTableModel>channel'},{path:'oTableModel>dcName'}],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
 										<Text text="{oTableModel>city}"></Text>
