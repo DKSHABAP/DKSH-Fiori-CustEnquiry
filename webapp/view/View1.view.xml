@@ -101,6 +101,7 @@
 								<!--<Column hAlign="Center" visible="{device>/system/phone}">-->
 								<!--	<Label text="" design="Bold"/>-->
 								<!--</Column>-->
+								
 								<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true">
 									<Label text="{i18n>DistChannel}" design="Bold"/>
 								</Column>
