@@ -763,7 +763,6 @@ sap.ui.define([
 					// 	and: true
 					// });
 					// filters.push(oFilter);
-					
 					if (oModelData.name)
 						a.push(new sap.ui.model.Filter("nameInEN", sap.ui.model.FilterOperator.EQ, "*" + oModelData.name + "*"));
 					var that = this;
