@@ -9,7 +9,7 @@ sap.ui.define([
 	"sap/m/MessageToast",
 	'sap/ui/core/Fragment'
 ], function (Controller, JSONModel, Export, ExportTypeCSV, Token, formatter, Spreadsheet, MessageToast, Fragment) {
-	"use strict"; 
+	"use strict";
 	return Controller.extend("incture.com.ConnectClientCustomeEnquiry.controller.View1", {
 		onInit: function () {
 			var oModel = new JSONModel();

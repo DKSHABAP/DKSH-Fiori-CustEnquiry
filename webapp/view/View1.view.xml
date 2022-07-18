@@ -12,7 +12,7 @@
 				<!--<Button text="Search" type="Emphasized"></Button>-->
 				<!--		</content>-->
 				<!--	</OverflowToolbar>-->
-				<!--</customHeader>--> 
+				<!--</customHeader>-->
 				<content>
 					<l:VerticalLayout width="100%">
 						<!--<Title text="Selection Criteria" level="H4" titleStyle="H4" class="titleCls"/>-->
