@@ -117,7 +117,7 @@ sap.ui.define([
 				complete: function (data) {}
 			});
 		},
-		/*function to call scim service to get the user details*/
+		/*function to call scim service to get the user details*/ 
 		getLoggedInUserName: function (userId) {
 			var that = this;
 			var oLoggedInUserDetailModel = new sap.ui.model.json.JSONModel();

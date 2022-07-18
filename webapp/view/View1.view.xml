@@ -120,7 +120,7 @@
 										<Text text="{oTableModel>custCode}"></Text>
 										<Text
 											text="{parts:[{path:'oTableModel>salesOrg'},{path:'oTableModel>sOrgName'}],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'}"></Text>
-										<!--<Text text="{oTableModel>titleInLocalName}"></Text>-->
+										<!--<Text text="{oTableModel>titleInLocalName}"> </Text>-->
 										<Text
 											text="{parts:[{path:'oTableModel>titleInLocalName'},{path:'oTableModel>nameInTH'}],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'} "></Text>
 										<Text text="{oTableModel>nameInEN}"></Text>
