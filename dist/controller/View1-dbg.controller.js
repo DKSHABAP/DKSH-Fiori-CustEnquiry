@@ -9,7 +9,7 @@ sap.ui.define([
 	"sap/m/MessageToast",
 	'sap/ui/core/Fragment'
 ], function (Controller, JSONModel, Export, ExportTypeCSV, Token, formatter, Spreadsheet, MessageToast, Fragment) {
-	"use strict";
+	"use strict"; 
 	return Controller.extend("incture.com.ConnectClientCustomeEnquiry.controller.View1", {
 		onInit: function () {
 			var oModel = new JSONModel();
@@ -117,7 +117,7 @@ sap.ui.define([
 				complete: function (data) {}
 			});
 		},
-		/*function to call scim service to get the user details*/
+		/*function to call scim service to get the user details*/ 
 		getLoggedInUserName: function (userId) {
 			var that = this;
 			var oLoggedInUserDetailModel = new sap.ui.model.json.JSONModel();

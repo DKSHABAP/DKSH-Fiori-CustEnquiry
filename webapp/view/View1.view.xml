@@ -90,6 +90,9 @@
 									<Label text="{i18n>Name(EN)}" design="Bold"/>
 								</Column>
 								<Column hAlign="Center" demandPopin="true">
+									<Label text="{i18n>DeletionFlag}" design="Bold" wrapping="true"/>
+								</Column>
+								<Column hAlign="Center" demandPopin="true">
 									<Label text="{i18n>OrderBlock}" design="Bold" wrapping="true"/>
 								</Column>
 								<Column hAlign="Center" demandPopin="true">
@@ -124,6 +127,7 @@
 										<Text
 											text="{parts:[{path:'oTableModel>titleInLocalName'},{path:'oTableModel>nameInTH'}],formatter:'incture.com.MaterialEnquiry.model.formatter.f4ValueBind'} "></Text>
 										<Text text="{oTableModel>nameInEN}"></Text>
+										<CheckBox text="" enabled="false" selected="{oTableModel>deletionFlag}" />
 										<Text text="{oTableModel>orderBlock}"></Text>
 										<Text text="{oTableModel>deliveryBlock}"></Text>
 										<Text text="{oTableModel>billingBlock}"></Text>

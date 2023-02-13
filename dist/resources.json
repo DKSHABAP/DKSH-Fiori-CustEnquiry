@@ -1,7 +1,7 @@
 {
     "resources": [
         {
-            "name": "manifest-bundle.zip"
+            "name": "view/Fragments/popOver.fragment.xml"
         },
         {
             "name": "i18n/i18n_th.properties",
@@ -9,7 +9,7 @@
             "locale": "_th"
         },
         {
-            "name": "manifest.json"
+            "name": "Component.js"
         },
         {
             "name": "model/models.js"
@@ -21,15 +21,18 @@
             "name": "controller/View1.controller.js"
         },
         {
-            "name": "Component.js"
+            "name": "manifest.json"
         },
         {
-            "name": "i18n/i18n.properties",
-            "raw": "i18n/i18n.properties"
+            "name": "manifest-bundle.zip"
         },
         {
             "name": "Component-preload.js",
             "merged": true
+        },
+        {
+            "name": "Component-dbg.js",
+            "isDebug": true
         },
         {
             "name": "model/models-dbg.js",
@@ -41,10 +44,6 @@
         },
         {
             "name": "controller/View1-dbg.controller.js",
-            "isDebug": true
-        },
-        {
-            "name": "Component-dbg.js",
             "isDebug": true
         },
         {
@@ -60,7 +59,8 @@
             "name": "view/Fragments/soldTo.fragment.xml"
         },
         {
-            "name": "view/Fragments/popOver.fragment.xml"
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
         },
         {
             "name": "view/Fragments/SalesOrgSingle.fragment.xml"
